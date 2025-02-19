@@ -1,3 +1,24 @@
+.titulo-header-temas-solar-ener {
+    text-shadow: 3px 1px 5px yellow;
+}
+
+.titulo-header-temas-eolica-ener {
+    text-shadow: 3px 1px 5px #00e4e4;
+}
+
+.titulo-header-temas-nuclear-ener {
+    text-shadow: 3px 1px 5px yellow, 3px 1px 5px black;
+}
+
+.titulo-header-temas-baterias {
+    text-shadow: 3px 1px 5px #002bec, 3px 1px 5px red;
+}
+
+.titulo-header-temas-uranio {
+    text-shadow: 3px 1px 5px #ffae00;
+}
+
+
 .imagem-tema {
     max-width: 30rem;
     border-radius: 10px;
@@ -8,13 +29,11 @@
     height: 60vh;
     border-radius: 10px;
     position: relative;
-    position: relative;
     margin: 0;
     z-index: 1;
 }
 
 .video-tema {
-    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -51,9 +70,6 @@
     margin: 0 8rem;
 }
 
-#contet-section-tema {
-    margin-bottom: 10rem;
-}
 
 .separador {
     margin-top: 5rem;

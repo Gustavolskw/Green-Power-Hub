@@ -12,7 +12,13 @@ const temasImportantesList = {
         titulo: "Baterias Inteligentes"
     },
     "uranio": {
-        titulo: "Tecnologia de Enriquecimento de Urânio no Brasil"
+        titulo: "Enriquecimento de Urânio no Brasil"
+    },
+    "biogas": {
+        titulo: "Biogás e Biomassa"
+    },
+    "hidro-verde": {
+        titulo: "Hidrogênio Verde"
     }
 };
 let basePath = window.location.pathname.includes("/Pages/") ? '../../' : './';

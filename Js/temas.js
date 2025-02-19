@@ -10,6 +10,7 @@ function carregarDadosDoTema() {
         "solar-ener": {
             titulo: "Energia Solar: A Revolução da Sustentabilidade",
             introducao: "A energia solar é uma das principais fontes de energia renovável e tem se tornado cada vez mais popular devido à sua acessibilidade e impacto ambiental reduzido. Utilizando painéis fotovoltaicos para converter a luz do sol em eletricidade, essa tecnologia é fundamental para a transição energética global.",
+            processo: "",
             beneficios: ["<span class='fw-bold'>Fonte Inesgotável:</span>  O sol é uma fonte de energia abundante e gratuita.",
                 "<span class='fw-bold'>Baixo Impacto Ambiental:</span> Reduz a pegada de carbono ao substituir combustíveis fósseis.",
                 "<span class='fw-bold'>Autossuficiência Energética:</span>  Permite que residências e empresas gerem sua própria eletricidade.",
@@ -26,6 +27,7 @@ function carregarDadosDoTema() {
         "eolica-ener": {
             titulo: "Energia Eólica: O Poder do Vento na Geração de Eletricidade",
             introducao: "A energia eólica é uma das formas mais eficientes de geração de eletricidade renovável. Utilizando turbinas para converter a energia cinética do vento em eletricidade, essa tecnologia tem crescido significativamente no mundo.",
+            processo: "",
             beneficios: ["<span class='fw-bold'>Baixa Emissão de Carbono:</span> Não gera poluição durante a operação.",
                 "<span class='fw-bold'>Disponibilidade Constante: </span>Pode operar durante o dia e a noite.",
                 "<span class='fw-bold'>Eficiência em Grandes Escalas:</span> Parques eólicos podem abastecer cidades inteiras.",
@@ -43,6 +45,7 @@ function carregarDadosDoTema() {
         "nuclear-ener": {
             titulo: "Energia Nuclear: Uma Fonte Limpa e Segura para o Futuro",
             introducao: "Apesar das controvérsias, a energia nuclear é uma das fontes mais eficientes e confiáveis de eletricidade. Utilizando a fissiona nuclear para gerar calor e movimentar turbinas, essa tecnologia fornece eletricidade limpa e estável.",
+            processo: "",
             beneficios: ["<span class='fw-bold'>Alta Eficiência:</span> Pequenas quantidades de urânio geram grandes volumes de energia.",
                 "<span class='fw-bold'>Geração Contínua:</span> Não depende de fatores climáticos.",
                 "<span class='fw-bold'>Baixa Emissão de CO2: </span>Comparável a fontes renováveis em termos de impacto ambiental.",
@@ -60,6 +63,7 @@ function carregarDadosDoTema() {
         "baterias": {
             titulo: "Baterias Inteligentes: Armazenando Energia para um Mundo Sustentável",
             introducao: "Com o crescimento das energias renováveis, as baterias inteligentes desempenham um papel crucial no armazenamento de eletricidade e na estabilidade da rede elétrica.",
+            processo: "",
             beneficios: ["<span class='fw-bold'>Otimiza o Uso de Energias Renováveis:</span> Permite armazenar o excesso de energia solar e eólica para uso posterior.",
                 "<span class='fw-bold'>Reduz Custos de Energia:</span> Armazena eletricidade quando os preços são baixos e libera quando estão altos.",
                 "<span class='fw-bold'>Maior Autossuficiência:</span> Residências e empresas podem operar independentemente da rede elétrica.",
@@ -77,7 +81,7 @@ function carregarDadosDoTema() {
         "uranio": {
             titulo: "Tecnologia de Enriquecimento de Urânio no Brasil: O Potencial da Energia Nuclear",
             introducao: "O Brasil é um dos poucos países do mundo com capacidade tecnológica para o enriquecimento de urânio, um processo essencial para a geração de energia nuclear. Com grandes reservas de urânio e tecnologia própria de enriquecimento, o país se destaca no setor nuclear e tem potencial para expandir sua matriz energética de forma segura e sustentável.",
-            processo: "O enriquecimento de urânio é a etapa em que se aumenta a concentração do isótopo físsil U-235, fundamental para reatores nucleares. No Brasil, esse processo é realizado pela Indústrias Nucleares do Brasil (INB), utilizando tecnologia nacional baseada em ultracentrifugação, uma técnica eficiente e de baixo consumo energético.",
+            processo: ["O enriquecimento de urânio é a etapa em que se aumenta a concentração do isótopo físsil U-235, fundamental para reatores nucleares. No Brasil, esse processo é realizado pela Indústrias Nucleares do Brasil (INB), utilizando tecnologia nacional baseada em ultracentrifugação, uma técnica eficiente e de baixo consumo energético.",],
             beneficios: ["<span class='fw-bold'>Autossuficiência Energética:</span> Com tecnologia própria, o Brasil reduz a dependência externa para o abastecimento de suas usinas nucleares.",
                 "<span class='fw-bold'>Segurança e Controle:</span> O domínio dessa tecnologia fortalece a segurança energética e permite um controle mais rigoroso sobre os processos de produção de combustível nuclear.",
                 "<span class='fw-bold'>Expansão da Energia Nuclear:</span> A capacidade de enriquecer urânio pode viabilizar novos projetos de usinas nucleares no Brasil, como a ampliação do complexo de Angra e futuras iniciativas.",
@@ -88,11 +92,51 @@ function carregarDadosDoTema() {
             video: "NuclearPlantUranuim.mp4",
             impacto: "Com investimentos em inovação e segurança, a energia nuclear pode contribuir para um futuro mais sustentável, garantindo uma fonte limpa e confiável de eletricidade para o Brasil. A tecnologia de enriquecimento de urânio fortalece o papel do país na geopolítica energética e abre caminho para novas possibilidades na exploração e uso pacífico da energia nuclear."
 
+        },
+        "biogas": {
+            titulo: "Biogás e Biomassa: Energia Renovável a partir de Resíduos",
+            introducao: "O Brasil, sendo um dos maiores produtores agropecuários do mundo, gera uma enorme quantidade de resíduos orgânicos que podem ser convertidos em energia limpa. O biogás e a biomassa surgem como soluções sustentáveis para transformar esses resíduos em eletricidade, calor e combustível, reduzindo a dependência de fontes fósseis e minimizando impactos ambientais.",
+            processo: [
+                "<span class='fw-bold'>Biogás: </span>Um gás renovável produzido pela decomposição de matéria orgânica, como esterco, resíduos agrícolas, lixo orgânico e esgoto. Ele é rico em metano (CH4), podendo ser utilizado para geração de eletricidade e combustível.",
+                "<span class='fw-bold'>Biomassa: </span>Material orgânico proveniente de fontes renováveis, como restos de madeira, bagaço de cana-de-açúcar e resíduos agrícolas, que pode ser queimado ou processado para gerar energia térmica e elétrica."
+
+            ],
+            beneficios: ["<span class='fw-bold'>Aproveitamento de resíduos:</span> Reduz a poluição e promove a economia circular.",
+                "<span class='fw-bold'>Redução das emissões de gases de efeito estufa:</span> Substitui combustíveis fósseis, diminuindo a liberação de CO₂.",
+                "<span class='fw-bold'>Geração descentralizada de energia: </span>Pode ser implantada em pequenas propriedades rurais e indústrias.",
+                "<span class='fw-bold'>Autossuficiência energética: </span>Permite a produção local de energia, reduzindo custos.",
+            ],
+            desafios: ["Apesar do grande potencial, o biogás e a biomassa ainda enfrentam desafios como altos custos iniciais e a necessidade de infraestrutura adequada. No entanto, políticas públicas e incentivos podem estimular a adoção dessa tecnologia, ampliando sua contribuição para a matriz energética brasileira."
+            ],
+            images: ["ciclo-da-biomassa.jpg", "ciclo-geracao-biogas.jpg"],
+            video: "BioGas.mp4",
+            impacto: "Com investimentos e inovação, o Brasil pode consolidar-se como líder na produção de biogás e biomassa, garantindo uma fonte de energia renovável que aproveita resíduos e reduz impactos ambientais."
+
+        },
+        "hidro-verde": {
+            titulo: "Hidrogênio Verde: O Combustível do Futuro no Brasil",
+            introducao: "O hidrogênio verde tem sido apontado como um dos combustíveis do futuro, essencial para a descarbonização da economia global. Produzido a partir de fontes renováveis como a energia solar e eólica, ele pode ser utilizado na indústria, transportes e geração de eletricidade. O Brasil, com sua vasta disponibilidade de energia limpa, tem grande potencial para se tornar um líder na produção e exportação de hidrogênio verde.",
+            processo: ["O hidrogênio verde é produzido por meio da eletrólise da água, um processo que utiliza eletricidade renovável para separar o hidrogênio do oxigênio. Diferente do hidrogênio cinza (derivado de combustíveis fósseis) e do hidrogênio azul (que utiliza captura de carbono), o hidrogênio verde não emite gases de efeito estufa, sendo totalmente sustentável."],
+            beneficios: ["<span class='fw-bold'>Zero emissões de carbono: </span>Ajuda na transição para uma economia limpa.",
+                "<span class='fw-bold'>Armazenamento de energia: </span>Pode ser usado para armazenar o excesso de eletricidade renovável.",
+                "<span class='fw-bold'>Versatilidade: </span>Aplicável na indústria, transporte pesado e geração de energia.",
+                "<span class='fw-bold'>Potencial de exportação: </span>O Brasil pode se tornar um grande fornecedor global de hidrogênio verde.",
+            ],
+            desafios: ["Os desafios incluem os altos custos de produção e a necessidade de infraestrutura específica para transporte e armazenamento. Entretanto, investimentos e parcerias internacionais podem acelerar o desenvolvimento dessa tecnologia no Brasil.",
+            ],
+            images: ["hidrogenio-verde.jpg", "hidrogenio-verde_silo.jpg"],
+            video: "Hidrogenio-verde-agua.mp4",
+            impacto: "O hidrogênio verde pode desempenhar um papel fundamental na transição energética global, ajudando o Brasil a reduzir sua dependência de combustíveis fósseis e se consolidar como um líder na nova economia de baixo carbono."
+
         }
     };
 
     if (temas[tema]) {
         const dadosTema = temas[tema];
+
+        const mainHeader = document.getElementById("main-header-title");
+
+        mainHeader.classList.add(`titulo-header-temas-${tema}`);
 
         // Atualiza os elementos da página
         document.getElementById("titulo-tema").innerText = dadosTema.titulo;
@@ -105,35 +149,41 @@ function carregarDadosDoTema() {
             <video src="../../Imgs/${dadosTema.video}" class="video-tema" muted loop autoplay playsinline></video>
         `;
 
+        const processoQuery = document.getElementById("processo");
+        const listaProcesos = document.getElementById("lista-processos");
+        listaProcesos.innerHTML = "";
+        if (dadosTema.processo != "") {
+
+            dadosTema.processo.forEach(proceso => {
+                const processosDoTema = `<li class="texto-part-tema px-5">${proceso}</li>`
+                listaProcesos.innerHTML += processosDoTema;
+            })
+        } else {
+            processoQuery.classList.add("d-none");
+        }
+
         // Adiciona imagens
         const imagensContainer = document.getElementById("imagens-tema");
         imagensContainer.innerHTML = "";
         dadosTema.images.forEach(image => {
-            const imgElement = document.createElement("img");
-            imgElement.className = "imagem-tema";
-            imgElement.src = `../../Imgs/${image}`;
-            imgElement.alt = `Imagem do tema: ${dadosTema.titulo}`;
-            imagensContainer.appendChild(imgElement);
+            const imgElement = `<img src="../../Imgs/${image}" class="imagem-tema" atl="Imagem do tema: ${dadosTema.titulo}">`
+            imagensContainer.innerHTML += imgElement;
         });
 
         // Adiciona Benefícios
         const beneficiosLista = document.getElementById("beneficios");
         beneficiosLista.innerHTML = "";
         dadosTema.beneficios.forEach(beneficio => {
-            const li = document.createElement("li");
-            li.className = "texto-part-tema";
-            li.innerHTML = beneficio;
-            beneficiosLista.appendChild(li);
+            const li = `<li class="texto-part-tema">${beneficio}</li>`;
+            beneficiosLista.innerHTML += li;
         });
 
         // Adiciona Desafios
         const desafiosLista = document.getElementById("desafios");
         desafiosLista.innerHTML = "";
         dadosTema.desafios.forEach(desafio => {
-            const li = document.createElement("li");
-            li.className = "texto-part-tema";
-            li.innerHTML = desafio;
-            desafiosLista.appendChild(li);
+            const li = `<li class="texto-part-tema">${desafio}</li>`;
+            desafiosLista.innerHTML += li;
         });
 
     } else {

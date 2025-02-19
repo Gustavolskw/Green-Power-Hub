@@ -29,6 +29,18 @@ const images = [
         src: "Angra3.jpeg",
         text: "O Brasil é um dos poucos países do mundo com capacidade tecnológica para o enriquecimento de urânio, um processo essencial para a geração de energia nuclear.",
         link: "uranio"
+    },
+    {
+        title: "Biogás e Biomassa: Energia Renovável a partir de Resíduos",
+        src: "biomassa-energia-vantagens.jpg",
+        text: "O Brasil, sendo um dos maiores produtores agropecuários do mundo, gera uma enorme quantidade de resíduos orgânicos que podem ser convertidos em energia limpa. ",
+        link: "biogas"
+    },
+    {
+        title: "Hidrogênio Verde: O Combustível do Futuro no Brasil",
+        src: "hidrogenio-verde-card.jpg",
+        text: "O Brasil é um dos poucos países do mundo com capacidade tecnológica para o enriquecimento de urânio, um processo essencial para a geração de energia nuclear.",
+        link: "hidro-verde"
     }
 ]
 

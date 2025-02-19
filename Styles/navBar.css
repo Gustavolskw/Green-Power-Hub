@@ -1,0 +1,61 @@
+#text-header-nav {
+    font-family: "Concert One", serif;
+    background-color: #2e7d32;
+    padding: 1rem 0;
+    color: var(--branco);
+    text-shadow: 3px 1px 5px var(--verde-claro);
+}
+
+#text-header-nav>h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.img-logo {
+    max-width: 35px;
+}
+
+.img-user {
+    max-width: 8%;
+}
+
+.active {
+    text-shadow: 3px 1px 5px black;
+}
+
+.nav-bar-theme {
+    background-color: var(--verde-claro);
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    scale: 105%;
+    font-weight: bold;
+}
+
+.div-cont-user-on {
+    padding-bottom: 0.8rem;
+}
+
+.sector-user-on {
+    justify-content: end;
+}
+
+@media(max-width:992px) {
+    .sector-user-on {
+        justify-content: start;
+    }
+
+    .div-cont-user-on {
+        padding-bottom: 0.5rem;
+    }
+
+    .img-user {
+        max-width: 5%;
+    }
+}
