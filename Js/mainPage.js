@@ -1,0 +1,79 @@
+
+const images = [
+    {
+        title: "Baterias Inteligentes",
+        src: "Batweria inteligente Chinesa.jpg",
+        text: "Sistemas de armazenamento de energia que guardam o excesso gerado por fontes solares e eólicas para uso posterior. Essas baterias utilizam algoritmos inteligentes para otimizar o carregamento e descarregamento.",
+        link: "baterias"
+    },
+    {
+        title: "Turbinas Eólicas",
+        src: "Turbinas Eolicas.jpg",
+        text: "Geradores de energia que convertem a força do vento em eletricidade. Podem complementar a energia solar, principalmente em locais onde há ventos constantes.",
+        link: "eolica-ener"
+    },
+    {
+        title: "Placas Solares ",
+        src: "Plataformas solars Oceano chines.jpeg",
+        text: "Painéis fotovoltaicos responsáveis por converter a luz solar em eletricidade. Essa energia pode ser usada imediatamente ou armazenada em baterias para uso futuro.",
+        link: "solar-ener"
+    },
+    {
+        title: "Microreatores Modulares",
+        src: "Tech Nucelar.jpg",
+        text: "Pequenos reatores nucleares seguros e autônomos, projetados para operar continuamente e fornecer energia estável para a microgrid quando a energia solar ou eólica não for suficiente.",
+        link: "nuclear-ener"
+    },
+    {
+        title: "Tecnologia de Enriquecimento de Urânio no Brasil",
+        src: "Angra3.jpeg",
+        text: "O Brasil é um dos poucos países do mundo com capacidade tecnológica para o enriquecimento de urânio, um processo essencial para a geração de energia nuclear.",
+        link: "uranio"
+    }
+]
+
+export const mainPage = {
+
+    cardsLoaderSection: () => {
+
+        let cardSector = ""
+
+        images.forEach(image => {
+            cardSector +=
+                `<div id="card-item" class="card" style="width: 18rem;">
+            <img src="../Imgs/${image.src}" class="card-img-top" alt="...">
+             <div class="card-body">
+                <h5 class="card-title fw-bold">${image.title}</h5>
+                <p class="card-text">${image.text}</p>
+                <div class="d-flex justify-content-center">
+                <a class="btn button-interativo" href="../Pages/temas/index.html?tema=${image.link}">Visitar Artigo</a>
+                </div>
+            </div>
+        </div>`
+        })
+        const cardSection = document.getElementById("cards");
+        if (cardSection) {
+            cardSection.innerHTML = cardSector;
+        }
+    },
+    carrosel: () => {
+        const carrsel = document.getElementById("carrousel-items")
+
+        let carroselItesmEl = "";
+
+        for (let i = 0; i < images.length; i++) {
+            carroselItesmEl +=
+                `<div class="carousel-item ${i === 0 ? 'active' : ''}">
+            <img src="./Imgs/${images[i].src}" class="d-block w-100" alt="...">
+        </div>`;
+
+        }
+        carrsel.innerHTML += carroselItesmEl;
+    }
+
+
+
+}
+
+
+

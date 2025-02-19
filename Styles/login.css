@@ -1,0 +1,7 @@
+.login-body {
+    background-color: var(--marrom);
+}
+
+.login-fieldset {
+    background-color: var(--verde-escuro);
+}

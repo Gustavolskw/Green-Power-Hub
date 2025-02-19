@@ -1,0 +1,98 @@
+#header-text-content {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: var(--verde-escuro);
+}
+
+#text-header {
+    font-size: 2.5rem;
+}
+
+#sub-text-header {
+    font-size: 1.5rem;
+}
+
+#carrosel {
+    padding: 3rem 1rem;
+}
+
+
+#carouselExample {
+    width: 60%;
+}
+
+#cards {
+    gap: 10rem;
+    padding: 2rem 5rem;
+}
+
+#card-item {
+    border: 1px solid var(--verde-escuro);
+    color: white !important;
+}
+
+#card-item:hover {
+    scale: 102%;
+    rotate: 1deg;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-title {
+    color: var(--verde-escuro);
+}
+
+.card-text {
+    color: var(--marrom);
+}
+
+#artigos {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+
+.contato-form {
+    padding: 10em 0;
+}
+
+.contato-fieldset {
+    background-color: #2e7d32
+}
+
+.is-invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+@media(max-width:1000px) {}
+
+@media(max-width:800px) {
+    #carouselExample {
+        width: 100%;
+    }
+
+    #header-text-content {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+
+    #text-header {
+        font-size: 1.8rem;
+    }
+
+    #sub-text-header {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:576px) {
+
+    #artigos {
+        font-size: 2rem;
+    }
+
+    #cards {
+        gap: 5rem;
+        padding: 2rem 2rem;
+    }
+}
