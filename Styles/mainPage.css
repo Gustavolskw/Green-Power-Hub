@@ -1,7 +1,6 @@
 #header-text-content {
     padding-top: 5rem;
     padding-bottom: 3rem;
-    background-color: var(--verde-escuro);
 }
 
 #text-header {
@@ -22,6 +21,10 @@
     width: 60%;
     border-radius: 10px;
     box-shadow: 0px 0px 50px black;
+}
+
+.carrousel-img {
+    height: 40em;
 }
 
 #cards {
@@ -50,7 +53,6 @@
 }
 
 #artigos {
-    background-color: var(--verde-escuro);
     color: var(--branco);
 }
 
@@ -59,10 +61,7 @@
     padding: 10em 0;
 }
 
-.contato-fieldset {
-    background-color: #2e7d32;
-    box-shadow: 5px 1px 25px black;
-}
+
 
 
 .is-invalid {

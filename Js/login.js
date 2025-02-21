@@ -1,95 +1,112 @@
-const users = [];
+const email = document.querySelector("#formEmail");
+const senha = document.querySelector("#formSenha");
+const botao = document.querySelector("#btnLogin");
+const formLogin = document.getElementById("loginUser");
 
-const fixedUser = {
-    userName: "Administrador",
-    email: "admin@email.com",
-    password: "qwerty"
-};
+const emailError = document.getElementById("emailError");
+const senhaError = document.getElementById("senhaError");
+const loginError = document.getElementById("loginError");
 
-users.push(fixedUser);
+
+
+
+
 
 export const login = {
     validaUser: (user) => {
-        return user.email === fixedUser.email && user.password === fixedUser.password;
+        const fixedUser = JSON.parse(localStorage.getItem("admin")) || null;
+        const cadastradoUser = JSON.parse(localStorage.getItem("cadastro")) || null;
+
+        if (fixedUser && user.email === fixedUser.email && user.password === fixedUser.password) {
+            login.registerUserSess(fixedUser.userName);
+            return true;
+        }
+
+        if (cadastradoUser && user.email === cadastradoUser.email && user.password === cadastradoUser.password) {
+            login.registerUserSess(cadastradoUser.userName);
+            return true;
+        }
+
+        return false;
     },
 
     validaFormulario: () => {
-        const email = document.querySelector("#formEmail");
-        const senha = document.querySelector("#formSenha");
-        const botao = document.querySelector("#btnLogin");
-        let errors = [];
-
         senha.classList.remove("is-invalid");
         email.classList.remove("is-invalid");
+        botao.disabled = false;
 
         if (senha.value.trim() === "") {
-            errors.push("O campo Senha é obrigatório.");
+            senhaError.innerText = "O campo Senha é obrigatório.";
             senha.classList.add("is-invalid");
+            botao.disabled = true;
         }
         if (senha.value.trim().length < 4) {
-            errors.push("A senha deve conter mais de 4 dígitos!");
+            senhaError.innerText = "A senha deve conter mais de 4 dígitos!";
             senha.classList.add("is-invalid");
+            botao.disabled = true;
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value.trim())) {
-            errors.push("O email inserido não é válido.");
+            emailError.innerText = "O email inserido não é válido.";
             email.classList.add("is-invalid");
-        }
-
-        if (errors.length > 0) {
-            alert(errors.join("\n"));
             botao.disabled = true;
-            return false;
         }
 
-        botao.disabled = false;
         return true;
     },
 
-    registerUserSess: () => {
-        localStorage.setItem("user", fixedUser.userName);
+    registerUserSess: (userName) => {
+        localStorage.setItem("user", userName);
         localStorage.setItem("userLogged", "true");
         localStorage.setItem("logonDate", Date.now().toString());
     },
 
     enviarDadosDeLogin: (event) => {
         event.preventDefault();
+        loginError.innerText = "";
 
         if (!login.validaFormulario()) {
-            alert("Erro de Validação de Formulário");
+            loginError.innerText = "Erro de Validação de Formulário";
             return;
         }
 
         const dados = {
-            email: document.querySelector("#formEmail").value.trim(),
-            password: document.querySelector("#formSenha").value.trim()
+            email: email.value.trim(),
+            password: senha.value.trim()
         };
 
         if (!login.validaUser(dados)) {
-            alert("Dados de usuário inválidos");
-            document.querySelector("#loginUser").reset();
+            loginError.innerText = "Dados de usuário inválidos";
+            formLogin.reset();
             return;
         }
 
-        document.querySelector("#loginUser").reset();
-        login.registerUserSess();
+        formLogin.reset();
+
         window.location.href = "/";
     },
 
     resetEmailError: () => {
-        document.querySelector("#formEmail").classList.remove("is-invalid");
-        document.querySelector("#btnLogin").disabled = false;
+        email.classList.remove("is-invalid");
+        loginError.innerText = "";
+        emailError.innerText = "";
+        botao.disabled = false;
     },
 
     resetSenhaError: () => {
-        document.querySelector("#formSenha").classList.remove("is-invalid");
-        document.querySelector("#btnLogin").disabled = false;
+        senha.classList.remove("is-invalid");
+        loginError.innerText = "";
+        senhaError.innerText = "";
+        botao.disabled = false;
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#formEmail").addEventListener("input", login.resetEmailError);
-    document.querySelector("#formSenha").addEventListener("input", login.resetSenhaError);
-    document.querySelector("#loginUser").addEventListener("submit", login.enviarDadosDeLogin);
-});
+if (window.location.pathname.includes("/Pages/login")) {
+    email.addEventListener("input", login.resetEmailError);
+    senha.addEventListener("input", login.resetSenhaError);
+    formLogin.addEventListener("submit", login.enviarDadosDeLogin);
+}
+
+
+

@@ -1,35 +1,36 @@
+const nomeContato = document.getElementById("formNomeCont");
+const telefoneContato = document.getElementById("formTelefoneCont");
+const emailContato = document.getElementById("formEmailCont");
+const formularioContato = document.getElementById("addContato");
+const contNomeError = document.getElementById("contNomeError");
+const contTelError = document.getElementById("contTelError");
+const contEmailError = document.getElementById("contEmailError");
+
+
 export const contato = {
     validaFormulario: () => {
-        const nome = document.getElementById("formNome");
-        const email = document.getElementById("formEmail");
-        const telefone = document.getElementById("formTelefone");
-        let errors = [];
+        nomeContato.classList.remove("is-invalid");
+        emailContato.classList.remove("is-invalid");
+        telefoneContato.classList.remove("is-invalid");
 
-        nome.classList.remove("is-invalid");
-        email.classList.remove("is-invalid");
-        telefone.classList.remove("is-invalid");
-
-        if (nome.value.trim() === "") {
-            errors.push("O campo Nome é obrigatório.");
-            nome.classList.add("is-invalid");
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value.trim())) {
-            errors.push("O email inserido não é válido.");
-            email.classList.add("is-invalid");
-        }
-
-        if (telefone.value.trim().length < 10) {
-            errors.push("O telefone deve conter pelo menos 10 dígitos.");
-            telefone.classList.add("is-invalid");
-        }
-
-        if (errors.length > 0) {
-            alert(errors.join("\n"));
+        if (nomeContato.value.trim() === "") {
+            contNomeError.innerText = "O campo Nome é obrigatório.";
+            nomeContato.classList.add("is-invalid");
             return false;
         }
 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailContato.value.trim())) {
+            contEmailError.innerText = "O email inserido não é válido.";
+            emailContato.classList.add("is-invalid");
+            return false;
+        }
+
+        if (telefoneContato.value.trim().length < 10) {
+            contTelError.innerText = "O telefone deve conter pelo menos 10 dígitos.";
+            telefoneContato.classList.add("is-invalid");
+            return false;
+        }
         return true;
     },
 
@@ -37,14 +38,13 @@ export const contato = {
         event.preventDefault();
 
         if (!contato.validaFormulario()) {
-            alert("Erro de Validação de Formulário");
             return;
         }
 
         const dados = {
-            nome: document.getElementById("formNome").value.trim(),
-            email: document.getElementById("formEmail").value.trim(),
-            telefone: document.getElementById("formTelefone").value.trim()
+            nome: nomeContato.value.trim(),
+            email: emailContato.value.trim(),
+            telefone: telefoneContato.value.trim()
         };
 
         alert("Contato enviado com sucesso!");
@@ -52,7 +52,7 @@ export const contato = {
     },
 
     formataTelefone: () => {
-        let telefone = document.getElementById("formTelefone").value;
+        let telefone = telefoneContato.value;
 
         telefone = telefone.replace(/\D/g, "");
 
@@ -62,12 +62,20 @@ export const contato = {
             telefone = telefone.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
         }
 
-        document.getElementById("formTelefone").value = telefone;
+        telefoneContato.value = telefone;
+    },
+    onchangeName: () => {
+        contNomeError.innerText = "";
+        nomeContato.classList.remove("is-invalid");
+    },
+    onChangeEmail: () => {
+        contEmailError.innerText = "";
+        emailContato.classList.remove("is-invalid");
     }
 };
 
-// ✅ Properly adding event listeners
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("formTelefone").addEventListener("input", contato.formataTelefone);
-    document.getElementById("addContato").addEventListener("submit", contato.enviarDadosContato);
-});
+telefoneContato.addEventListener("input", contato.formataTelefone);
+formularioContato.addEventListener("submit", contato.enviarDadosContato);
+emailContato.addEventListener("input", contato.onChangeEmail);
+nomeContato.addEventListener("input", contato.onchangeName)
+

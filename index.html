@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <section id="text-header-nav">
+        <section id="text-header-nav" class="text-container">
             <h1 class="text-center">Green Power Hub</h1>
         </section>
         <nav class=" navbar navbar-expand-lg nav-bar-theme">
@@ -27,7 +27,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-3">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
@@ -50,7 +50,8 @@
         </nav>
     </header>
     <section id="conteudo-principal">
-        <section id="header-text-content" class="text-white d-flex flex-column justify-content-center gap-4">
+        <section id="header-text-content"
+            class="text-white d-flex flex-column justify-content-center gap-4 text-container">
             <h2 id="text-header" class=" text-center ">Energia Verde: A Revolução da Sustentabilidade </h2>
             <cite id="sub-text-header" class=" text-center px-1 ">"O futuro da tecnologia passa pela inovação
                 sustentável,
@@ -64,7 +65,6 @@
         <section id="carrosel" class="d-flex justify-content-center my-5">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner rounded" id="carrousel-items">
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                     data-bs-slide="prev">
@@ -80,26 +80,38 @@
         </section>
 
 
-        <h2 id="artigos" class="text-center fw-bold pt-5  pb-5">Artigos</h2>
-        <section id="cards" class="d-flex  flex-wrap justify-content-center ">
+        <h2 id="artigos" class="text-center fw-bold pt-5 text-container  pb-5">Artigos</h2>
 
+
+
+
+        <section id="cards" class="d-flex flex-wrap justify-content-center mt-5 ">
+            <!--Cards -->
         </section>
+
+
+
+
+
         <section id="contato">
-            <form name="formCadastro" id="addContato" class="d-flex justify-content-center text-white contato-form">
-                <fieldset class="contato-fieldset p-5 rounded">
+            <form name="formContato" id="addContato" class="d-flex justify-content-center text-white contato-form">
+                <fieldset class="form-fieldset p-5 rounded ">
                     <legend class="text-center titulo-container">Receba Notificaçãoes</legend>
                     <div class="row">
                         <div class="col-md-6 pb-3">
                             <label for="formNome">Nome:</label>
-                            <input type="text" class="form-control" name="nome" id="formNome">
+                            <input type="text" class="form-control" name="nome" id="formNomeCont">
+                            <span id="contNomeError" class="error fw-bold"></span>
                         </div>
                         <div class="col-md-6 pb-3">
                             <label for="formTelefone">Telefone:</label>
-                            <input type="text" class="form-control" name="telefone" id="formTelefone">
+                            <input type="text" class="form-control" name="telefone" id="formTelefoneCont">
+                            <span id="contTelError" class="error fw-bold"></span>
                         </div>
                         <div class="col-md-12 pb-3">
                             <label for="formEmail">Email:</label>
-                            <input type="text" class="form-control" name="email" id="formEmail">
+                            <input type="text" class="form-control" name="email" id="formEmailCont">
+                            <span id="contEmailError" class="error fw-bold"></span>
                         </div>
                     </div>
                     <div class="row justify-content-center gap-2">
@@ -111,8 +123,19 @@
         </section>
     </section>
     <footer>
-        <p class="text-center text-white py-4">Copyright &copy; escola sistemica 2025</p>
+        <p class="text-center text-white py-4">Copyright &copy; Escola sistemica 2025</p>
     </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

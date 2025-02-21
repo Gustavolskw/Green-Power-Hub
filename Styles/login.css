@@ -5,3 +5,8 @@
 .login-fieldset {
     background-color: var(--verde-escuro);
 }
+
+.error {
+    color: white;
+    text-shadow: 1px 1px 1px red;
+}

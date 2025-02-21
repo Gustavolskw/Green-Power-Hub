@@ -14,12 +14,12 @@
     --verde-claro: #81c784;
     --marrom: #795548;
     --branco: #ffffff;
-
+    --verde-texte-fundo: #2e7d32cb;
 }
 
 body {
     font-family: "Montserrat", serif;
-    background-color: #c5c5c5dc;
+    background-color: #88888871;
     width: 100%;
     height: 100vh;
 }
@@ -36,9 +36,12 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.button-login {
-    color: white;
-    font-weight: bold;
+.text-container {
+    padding: 4rem 0;
+    background-color: var(--verde-texte-fundo);
+}
+
+.form-fieldset {
     background-color: var(--verde-escuro);
 }
 
@@ -46,6 +49,7 @@ body {
     scale: 102%;
     background-color: var(--branco) !important;
     color: black;
+    text-shadow: 0px 0px 0px black;
     transition: all 0.3s ease-in-out;
 }
 
@@ -54,8 +58,19 @@ body {
     font-size: 2rem;
 }
 
+.error {
+    color: white;
+    text-shadow: 1px 1px 1px red;
+}
+
 
 footer {
     color: var(--branco);
     background-color: var(--marrom);
+}
+
+@media(max-width:992px) {
+    .navbar-nav {
+        padding-left: 2rem;
+    }
 }

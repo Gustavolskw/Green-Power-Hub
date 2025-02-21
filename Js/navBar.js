@@ -27,7 +27,6 @@ export const navBar = {
     listagemDeTemas: () => {
         let listaTemasInsert = ``;
         Object.keys(temasImportantesList).forEach(tema => {
-            console.log(tema);
             listaTemasInsert += `
             <li>
                 <a
@@ -42,7 +41,6 @@ export const navBar = {
     },
     userAuthSection: () => {
         const user = navBar.buscaUser();
-        console.log(user);
         let loginSector = "";
         if (user.userLogged = false || user.userLogged == null) {
             loginSector += `<a class="btn button-login" href="${basePath}Pages/login/index.html" > Login</a > `;
@@ -57,7 +55,7 @@ export const navBar = {
                             </a>
                             <ul class="dropdown-menu dropdown-menu-start ">
                                 <li>
-                                    <button id="logoutButton" class="dropdown-item btn">Logoff</button>
+                                    <button id="logoutButton" class="dropdown-item btn">Logout</button>
                                 </li>
                             </ul>
                         </div>
@@ -77,7 +75,6 @@ export const navBar = {
         localStorage.removeItem("user");
         localStorage.removeItem("userLogged");
         localStorage.removeItem("logonDate");
-
         navBar.userAuthSection();
         window.location.reload();
     },
@@ -94,8 +91,11 @@ export const navBar = {
 window.logoff = navBar.logoff;
 
 document.addEventListener("DOMContentLoaded", () => {
-    navBar.listagemDeTemas();
-    navBar.userAuthSection();
+
 });
 
+if (!window.location.pathname.includes("/Pages/login/")) {
+    navBar.listagemDeTemas();
+    navBar.userAuthSection();
+}
 

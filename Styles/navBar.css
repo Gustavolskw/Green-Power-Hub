@@ -1,14 +1,22 @@
 #text-header-nav {
     font-family: "Concert One", serif;
-    background-color: #2e7d32;
+    background-color: var(--verde-escuro);
     padding: 1rem 0;
-    color: var(--branco);
-    text-shadow: 3px 1px 5px var(--verde-claro);
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 #text-header-nav>h1 {
     margin: 0;
     padding: 0;
+
+}
+
+.button-login {
+    color: white;
+    font-weight: bold;
+    background-color: var(--verde-claro);
+    text-shadow: 1px 1px 1px black;
 }
 
 .img-logo {
@@ -24,8 +32,9 @@
 }
 
 .nav-bar-theme {
-    background-color: var(--verde-claro);
+    background-color: var(--verde-escuro);
     color: white;
+    /*border-bottom: 8px solid var(--verde-claro);*/
 }
 
 .nav-link {

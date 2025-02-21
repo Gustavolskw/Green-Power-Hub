@@ -138,12 +138,10 @@ function carregarDadosDoTema() {
 
         mainHeader.classList.add(`titulo-header-temas-${tema}`);
 
-        // Atualiza os elementos da página
         document.getElementById("titulo-tema").innerText = dadosTema.titulo;
         document.getElementById("introducao-tema").innerText = dadosTema.introducao;
         document.getElementById("imapcto-texto").innerText = dadosTema.impacto;
 
-        // Adiciona o vídeo
         const videoContainer = document.getElementById("video");
         videoContainer.innerHTML = `
             <video src="../../Imgs/${dadosTema.video}" class="video-tema" muted loop autoplay playsinline></video>
@@ -162,7 +160,6 @@ function carregarDadosDoTema() {
             processoQuery.classList.add("d-none");
         }
 
-        // Adiciona imagens
         const imagensContainer = document.getElementById("imagens-tema");
         imagensContainer.innerHTML = "";
         dadosTema.images.forEach(image => {
@@ -170,7 +167,6 @@ function carregarDadosDoTema() {
             imagensContainer.innerHTML += imgElement;
         });
 
-        // Adiciona Benefícios
         const beneficiosLista = document.getElementById("beneficios");
         beneficiosLista.innerHTML = "";
         dadosTema.beneficios.forEach(beneficio => {
@@ -178,7 +174,6 @@ function carregarDadosDoTema() {
             beneficiosLista.innerHTML += li;
         });
 
-        // Adiciona Desafios
         const desafiosLista = document.getElementById("desafios");
         desafiosLista.innerHTML = "";
         dadosTema.desafios.forEach(desafio => {
