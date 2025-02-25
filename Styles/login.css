@@ -2,11 +2,42 @@
     background-color: var(--marrom);
 }
 
-.login-fieldset {
+#conteudo-login>div {
     background-color: var(--verde-escuro);
 }
 
 .error {
     color: white;
     text-shadow: 1px 1px 1px red;
+}
+
+#loginUser {
+    border-radius: 10px;
+}
+
+#conteudo-login {
+    padding: 10rem 5rem 5rem 5rem;
+}
+
+.img-side-login {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media(max-width:1200px) {
+    #conteudo-login {
+        padding: 10rem 0;
+    }
+}
+
+@media(max-width:768px) {
+
+
+    .img-side-login {
+        display: none;
+    }
+
+
 }

@@ -14,20 +14,17 @@
 
 <body class="login-body">
     <header>
-        <section id="text-header-nav">
-            <h1 class="text-center">Green Power Hub - Cadastro</h1>
-        </section>
         <nav class=" navbar navbar-expand-lg nav-bar-theme">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="img-logo" src="/assets/energia-verde.png"
-                        alt="Imagem de Logo"></a>
+            <div class="container-fluid p-0">
+                <a class="navbar-brand fw-bold text-logo ps-2" href="#"><img class="img-logo"
+                        src="../../assets/energia-verde.png" alt="Imagem de Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mx-auto content-links-nav mb-2 mb-lg-0 gap-md-5  ">
                         <li class="nav-item">
                             <a class="nav-link " aria-current="page" href="/">Home</a>
                         </li>
@@ -49,43 +46,52 @@
             </div>
         </nav>
     </header>
-    <section>
-        <form name="formLogin" id="cadastroUser" class="d-flex justify-content-center text-white contato-form mx-2">
-            <fieldset class="form-fieldset py-md-5 px-md-5 py-2 px-2 rounded mx-md-5 mx-3 text-container ">
-                <legend class="text-center titulo-container">Cadastro</legend>
-                <div class="row pb-5 justify-content-center ">
-                    <div class="col-md-4 col-10 pb-3 ">
-                        <label for="formNome" class="fw-bold">Nome:</label>
-                        <input type="text" class="form-control" name="name" id="formName">
-                        <span class="text-center fw-bold error" id="nomeError"></span>
-                    </div>
-                    <div class="col-md-4 col-10 pb-3">
-                        <label class="fw-bold" for="formEmailCad">Email:</label>
-                        <input type="text" class="form-control" name="emailCad" id="formEmailCad">
-                        <span class="text-center fw-bold error" id="emailError"></span>
-                    </div>
-                    <div class="col-md-4 col-10 pb-3">
-                        <label class="fw-bold" for="formCpf">CPF:</label>
-                        <input type="text" class="form-control" name="cpf" id="formCpf">
-                        <span class="text-center fw-bold error" id="cpfError"></span>
-                    </div>
-                    <div class="col-md-6 col-10 pb-3">
-                        <label class="fw-bold" for="formSenha">Senha:</label>
-                        <input type="password" class="form-control" name="senha" id="formSenha">
-                        <span class="text-center fw-bold error" id="senhaError"></span>
-                    </div>
-                    <div class="col-md-6 col-10 pb-3">
-                        <label class="fw-bold" for="formSenhaConf">Confirmar Senha:</label>
-                        <input type="password" class="form-control" name="senhaConfirm" id="formSenhaConf">
-                        <span class="text-center fw-bold error" id="confirmaSenhaError"></span>
-                    </div>
+    <section id="conteudo-cadastro">
+        <section class="px-md-5 d-flex justify-content-center w-100 conteudo-formulario-cadastro">
+            <div class="row w-100 rounded align-items-center contato-container w-100 my-0 ">
+                <form name="formLogin" id="cadastroUser" class="d-flex justify-content-center text-white col-md-8">
+                    <fieldset class="form-fieldset rounded text-container align-content-center px-md-5 px-1">
+                        <legend class="text-center titulo-container">Cadastro</legend>
+                        <div class="row pb-5 justify-content-center ">
+                            <div class="col-md-4 col-10 pb-3 ">
+                                <label for="formName" class="fw-bold">Nome:</label>
+                                <input type="text" class="form-control" name="name" id="formName">
+                                <span class="text-center fw-bold error" id="nomeError"></span>
+                            </div>
+                            <div class="col-md-4 col-10 pb-3">
+                                <label class="fw-bold" for="formEmailCad">Email:</label>
+                                <input type="text" class="form-control" name="emailCad" id="formEmailCad">
+                                <span class="text-center fw-bold error" id="emailError"></span>
+                            </div>
+                            <div class="col-md-4 col-10 pb-3">
+                                <label class="fw-bold" for="formCpf">CPF:</label>
+                                <input type="text" class="form-control" name="cpf" id="formCpf">
+                                <span class="text-center fw-bold error" id="cpfError"></span>
+                            </div>
+                            <div class="col-md-6 col-10 pb-3">
+                                <label class="fw-bold" for="formSenha">Senha:</label>
+                                <input type="password" class="form-control" name="senha" id="formSenha">
+                                <span class="text-center fw-bold error" id="senhaError"></span>
+                            </div>
+                            <div class="col-md-6 col-10 pb-3">
+                                <label class="fw-bold" for="formSenhaConf">Confirmar Senha:</label>
+                                <input type="password" class="form-control" name="senhaConfirm" id="formSenhaConf">
+                                <span class="text-center fw-bold error" id="confirmaSenhaError"></span>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center gap-2">
+                            <button class="btn btn-warning col-5" type="reset">Resetar</button>
+                            <button class="btn button-interativo col-5" type="submit" id="btnLogin">Entrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="col-md-4 p-0 container-foto d-flex justify-content-end">
+                    <img src="../../Imgs/terra-pote-natureza.jpg" class="img-side-cadastro rounded" alt="">
                 </div>
-                <div class="row justify-content-center gap-2">
-                    <button class="btn btn-warning col-5" type="reset">Resetar</button>
-                    <button class="btn button-interativo col-5" type="submit" id="btnLogin">Entrar</button>
-                </div>
-            </fieldset>
-        </form>
+            </div>
+
+        </section>
+
     </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -14,22 +14,27 @@
 
 <body class="login-body">
     <header>
-        <section id="text-header-nav">
-            <h1 class="text-center">Green Power Hub</h1>
-        </section>
-        <nav class=" navbar navbar-expand-lg nav-bar-theme">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="img-logo" src="../../assets/energia-verde.png"
-                        alt="Imagem de Logo"></a>
+        <nav class=" navbar navbar-expand-lg nav-bar-theme ">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand fw-bold text-logo ps-2" href="#"><img class="img-logo"
+                        src="../../assets/energia-verde.png" alt="Imagem de Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <ul class="navbar-nav mx-auto  mb-2 mb-lg-0 gap-md-5  ">
+                        <li class="nav-item w-100">
+                            <a class="nav-link " aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Temas Principais
+                            </a>
+                            <ul class="dropdown-menu" id="temas-importantes">
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Pages/cadastro/index.html">Cadastro</a>
@@ -39,32 +44,44 @@
             </div>
         </nav>
     </header>
+
     <section id="conteudo-login">
-        <form name="formLogin" id="loginUser" class="d-flex justify-content-center text-white contato-form">
-            <fieldset class="login-fieldset p-5 rounded">
-                <legend class="text-center titulo-container">Login</legend>
-                <div class="row">
-                    <div class="col-md-12 pb-3">
-                        <label for="formEmail" class="fw-bold">Email:</label>
-                        <input type="text" class="form-control" name="email" id="formEmail">
-                        <span id="emailError" class="fw-bold error"></span>
-                    </div>
-                    <div class="col-md-12 pb-3">
-                        <label for="formSenha" class="fw-bold">Senha:</label>
-                        <input type="password" class="form-control" name="senha" id="formSenha">
-                        <span id="senhaError" class="fw-bold  error"></span>
-                    </div>
+        <section class="px-md-5 d-flex justify-content-center  w-100">
+            <div class="row w-100 rounded align-items-center contato-container w-100 my-0 ">
+                <form name="formLogin" id="loginUser" class="d-flex justify-content-center text-white col-md-7">
+                    <fieldset class=" rounded align-content-center p-md-1 px-4 py-5">
+                        <legend class="text-center titulo-container">Login</legend>
+                        <div class="row">
+                            <div class="col-md-12 pb-3">
+                                <label for="formEmail" class="fw-bold">Email:</label>
+                                <input type="text" class="form-control" name="email" id="formEmail">
+                                <span id="emailError" class="fw-bold error"></span>
+                            </div>
+                            <div class="col-md-12 pb-3">
+                                <label for="formSenha" class="fw-bold">Senha:</label>
+                                <input type="password" class="form-control" name="senha" id="formSenha">
+                                <span id="senhaError" class="fw-bold  error"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 id="loginError" class="fw-bold  error text-center"></h5>
+                        </div>
+                        <div class="row justify-content-center gap-2">
+                            <button class="btn btn-warning col-5" type="reset">Resetar</button>
+                            <button class="btn button-interativo col-5" type="submit" id="btnLogin">Entrar</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+
+                <div class="col-md-5 p-0">
+                    <img src="../../Imgs/Imagem-tema-1.jpg" class="img-side-login rounded" alt="">
                 </div>
-                <div>
-                    <h5 id="loginError" class="fw-bold  error text-center"></h5>
-                </div>
-                <div class="row justify-content-center gap-2">
-                    <button class="btn btn-warning col-5" type="reset">Resetar</button>
-                    <button class="btn button-interativo col-5" type="submit" id="btnLogin">Entrar</button>
-                </div>
-            </fieldset>
-        </form>
+            </div>
+
+        </section>
     </section>
+
 
 
 </body>

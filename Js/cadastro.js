@@ -145,7 +145,8 @@ export const cadastro = {
         return true;
     },
     formataCpf: () => {
-        cadastro.onChangeCpf();
+        btnEnvio.disabled = false;
+        cpfField.classList.remove("is-invalid");
         let cpf = document.getElementById("formCpf").value;
 
         cpf = cpf.replace(/\D/g, "");

@@ -43,23 +43,22 @@ export const navBar = {
         const user = navBar.buscaUser();
         let loginSector = "";
         if (user.userLogged = false || user.userLogged == null) {
-            loginSector += `<a class="btn button-login" href="${basePath}Pages/login/index.html" > Login</a > `;
+            loginSector = `<a class="btn button-login" href="${basePath}Pages/login/index.html" > Login</a > `;
 
         } else {
-            loginSector += `
-                <div class="d-flex align-items-end gap-2 pe-5 sector-user-on" >
-                    <img class="img-user" src="${basePath}assets/energia-verde.png" alt="imagem do user">
-                        <div class="dropdown align-items-center div-cont-user-on">
-                            <a class="text-decoration-none text-white fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                ${user.userName}
+            loginSector = `
+                        <div class="dropdown">
+                            <a class=" img-container-user text-decoration-none text-white fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                               <img class="img-user" src="${basePath}assets/energia-verde.png" alt="imagem do user">
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-start ">
+                            <ul class="dropdown-menu dropdown-menu-start">
+                             <p class="text-center fw-bold">${user.userName}</p>
                                 <li>
                                     <button id="logoutButton" class="dropdown-item btn">Logout</button>
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    
             `;
         }
         const loginSection = document.getElementById("login-section");
