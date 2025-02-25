@@ -8,7 +8,14 @@ const senhaError = document.getElementById("senhaError");
 const loginError = document.getElementById("loginError");
 
 
-
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes("/Pages/login")) {
+        const userSaved = localStorage.getItem("userLogged");
+        if (userSaved == "true") {
+            window.location.href = "/";
+        }
+    }
+});
 
 
 

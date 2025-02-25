@@ -1,26 +1,14 @@
-.titulo-header-temas-solar-ener {
-    text-shadow: 1px 1px 3px yellow;
+.conteudo_de_texto {
+    padding-top: 10rem;
 }
 
-.titulo-header-temas-eolica-ener {
-    text-shadow: 1px 1px 3px #00e4e4;
-}
-
-.titulo-header-temas-nuclear-ener {
-    text-shadow: 1px 1px 3px yellow, 3px 1px 5px black;
-}
-
-.titulo-header-temas-baterias {
-    text-shadow: 1px 1px 3px #002bec, 3px 1px 5px red;
-}
-
-.titulo-header-temas-uranio {
-    text-shadow: 1px 1px 3px #ffae00;
+#contet-section-tema {
+    background-color: var(--verde-texte-fundo);
 }
 
 
 .imagem-tema {
-    max-width: 30rem;
+    max-width: 90%;
     border-radius: 10px;
 }
 
@@ -66,7 +54,7 @@
 
 
 .separador {
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
 @media(max-width:992px) {
@@ -74,9 +62,7 @@
         margin: 0 6rem;
     }
 
-    .imagem-tema {
-        max-width: 20rem;
-    }
+
 
     #video {
         height: 50vh;
@@ -115,9 +101,7 @@
         margin: 0 0;
     }
 
-    .imagem-tema {
-        max-width: 20rem;
-    }
+
 
     #video {
         width: 100%;

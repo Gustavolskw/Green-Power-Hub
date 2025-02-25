@@ -37,7 +37,7 @@ body {
 }
 
 .text-container {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: var(--verde-texte-fundo);
 }
 
@@ -61,6 +61,11 @@ body {
 .error {
     color: white;
     text-shadow: 1px 1px 1px red;
+}
+
+.is-invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
 }
 
 

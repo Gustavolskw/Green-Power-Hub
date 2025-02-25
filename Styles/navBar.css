@@ -1,9 +1,8 @@
-#text-header-nav {
+.text-logo {
     font-family: "Concert One", serif;
-    background-color: var(--verde-escuro);
     padding: 1rem 0;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    color: var(--verde-escuro);
+    font-size: 2rem;
 }
 
 #text-header-nav>h1 {
@@ -15,16 +14,37 @@
 .button-login {
     color: white;
     font-weight: bold;
-    background-color: var(--verde-claro);
+    font-size: 1.3rem;
+    background-color: var(--verde-escuro);
+    text-shadow: 1px 1px 1px black;
+}
+
+.button-login:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    background-color: var(--verde-claro) !important;
     text-shadow: 1px 1px 1px black;
 }
 
 .img-logo {
-    max-width: 35px;
+    max-width: 60px;
+}
+
+#login-section {
+    width: 8%;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    margin-right: 3rem;
+}
+
+.img-container-user {
+    width: 100%
 }
 
 .img-user {
-    max-width: 8%;
+    width: 50%;
 }
 
 .active {
@@ -32,39 +52,63 @@
 }
 
 .nav-bar-theme {
-    background-color: var(--verde-escuro);
+    z-index: 9999;
+    background-color: transparent;
+    position: absolute;
+    backdrop-filter: blur(8px);
+    background-color: #ffffff33;
     color: white;
+    width: 100%;
     /*border-bottom: 8px solid var(--verde-claro);*/
 }
 
 .nav-link {
     color: white !important;
     font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px black;
 }
 
 .nav-link.active {
-    scale: 105%;
-    font-weight: bold;
+    text-shadow: 8px 1px 8px var(--verde-escuro);
 }
 
-.div-cont-user-on {
-    padding-bottom: 0.8rem;
+.content-links-nav {
+    padding-left: 10rem;
 }
 
-.sector-user-on {
-    justify-content: end;
+
+
+@media(max-width:1300px) {
+
+    .nav-link {
+        font-size: 1.3rem;
+    }
+
+    #login-section {
+        width: 12%;
+        display: flex;
+        justify-content: end;
+        padding-right: 1rem;
+        margin-right: 3rem;
+    }
 }
 
 @media(max-width:992px) {
-    .sector-user-on {
-        justify-content: start;
-    }
 
-    .div-cont-user-on {
-        padding-bottom: 0.5rem;
-    }
+
+
 
     .img-user {
-        max-width: 5%;
+        max-width: 8%;
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media(max-width:756px) {
+    #login-section {
+        width: 100%;
+        display: flex;
+        padding-left: 2rem;
     }
 }

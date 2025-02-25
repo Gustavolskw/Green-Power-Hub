@@ -1,0 +1,30 @@
+#cadastroUser {
+    border-radius: 10px;
+}
+
+#conteudo-cadastro {
+    padding: 10rem 5rem 5rem 5rem;
+}
+
+.img-side-cadastro {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media(max-width:1200px) {
+    #conteudo-cadastro {
+        padding: 10rem 0;
+    }
+}
+
+@media(max-width:768px) {
+
+
+    .img-side-cadastro {
+        display: none;
+    }
+
+
+}

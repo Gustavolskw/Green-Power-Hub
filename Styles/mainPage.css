@@ -1,41 +1,50 @@
 #header-text-content {
     padding-top: 5rem;
     padding-bottom: 3rem;
+    background-image: url("../Imgs/hidrogenio-verde-card.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
 }
 
 #text-header {
     font-size: 2.5rem;
+    padding: 1rem 0;
+    backdrop-filter: blur(50px);
+    text-shadow: 1px 1px 1px black;
 }
 
 #sub-text-header {
     font-size: 1.5rem;
+    padding: 2rem 0;
+    backdrop-filter: blur(50px);
+    text-shadow: 1px 1px 1px black;
 }
-
-#carrosel {
-    padding: 3rem 1rem;
-
-}
-
 
 #carouselExample {
-    width: 65%;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0px 0px 50px black;
 }
 
 .carrousel-img {
     height: 40em;
 }
 
-#cards {
-    gap: 10rem;
-    padding: 2rem 5rem;
+.img-side-carrosel {
+    height: 40em;
+    width: 100%;
 }
 
+
+#cards {
+    gap: 5rem;
+    padding: 2rem 1rem;
+}
+
+
 #card-item {
-    border: 2px solid var(--verde-escuro);
     color: white !important;
-    box-shadow: 5px 1px 25px black;
 }
 
 #card-item:hover {
@@ -43,6 +52,7 @@
     rotate: 1deg;
     transition: all 0.3s ease-in-out;
 }
+
 
 .card-title {
     color: var(--verde-escuro);
@@ -56,36 +66,59 @@
     color: var(--branco);
 }
 
+#contato {
+    padding: 0 5rem;
+}
 
-.contato-form {
-    padding: 10em 0;
+.contato-container {
+    background-color: var(--verde-escuro);
+    border-radius: 10px;
+}
+
+
+.img-side-contato {
+    width: 100%;
+    height: 100%;
 }
 
 
 
 
-.is-invalid {
-    border: 2px solid red;
-    background-color: #ffe6e6;
-}
+
 
 @media(max-width:1200px) {
     .carrousel-img {
         height: 30em;
     }
+
+    .img-side-carrosel {
+        height: 30em
+    }
+
+    .img-side-contato {
+        height: 25em;
+    }
 }
 
 @media(max-width:1000px) {
     .carrousel-img {
-        height: 30em;
+        height: 25em;
+    }
+
+    .img-side-carrosel {
+        height: 25em
     }
 
     #carouselExample {
-        width: 90%;
+        width: 100%;
+    }
+
+    #contato {
+        padding: 0 0;
     }
 }
 
-@media(max-width:800px) {
+@media(max-width:768px) {
     #carouselExample {
         width: 100%;
     }
@@ -103,6 +136,14 @@
         font-size: 1.2rem;
     }
 
+
+    .img-side-carrosel {
+        display: none;
+    }
+
+    .img-side-contato {
+        display: none;
+    }
 
     .carrousel-img {
         height: 25em;
