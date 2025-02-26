@@ -36,7 +36,6 @@
     width: 100%;
 }
 
-
 #cards {
     gap: 5rem;
     padding: 2rem 1rem;
@@ -52,7 +51,6 @@
     rotate: 1deg;
     transition: all 0.3s ease-in-out;
 }
-
 
 .card-title {
     color: var(--verde-escuro);
@@ -75,16 +73,10 @@
     border-radius: 10px;
 }
 
-
 .img-side-contato {
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
 
 @media(max-width:1200px) {
     .carrousel-img {
