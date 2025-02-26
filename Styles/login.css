@@ -2,21 +2,16 @@
     background-color: var(--marrom);
 }
 
+#conteudo-login {
+    padding: 10rem 5rem 5rem 5rem;
+}
+
 #conteudo-login>div {
     background-color: var(--verde-escuro);
 }
 
-.error {
-    color: white;
-    text-shadow: 1px 1px 1px red;
-}
-
 #loginUser {
     border-radius: 10px;
-}
-
-#conteudo-login {
-    padding: 10rem 5rem 5rem 5rem;
 }
 
 .img-side-login {
@@ -33,8 +28,6 @@
 }
 
 @media(max-width:768px) {
-
-
     .img-side-login {
         display: none;
     }

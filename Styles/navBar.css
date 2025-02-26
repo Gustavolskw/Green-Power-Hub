@@ -1,14 +1,39 @@
-.text-logo {
-    font-family: "Concert One", serif;
-    padding: 1rem 0;
-    color: var(--verde-escuro);
-    font-size: 2rem;
+.nav-bar-theme {
+    z-index: 9999;
+    background-color: transparent;
+    position: absolute;
+    backdrop-filter: blur(8px);
+    background-color: #ffffff33;
+    color: white;
+    width: 100%;
+    /*border-bottom: 8px solid var(--verde-claro);*/
 }
 
-#text-header-nav>h1 {
-    margin: 0;
-    padding: 0;
+.img-logo {
+    max-width: 60px;
+}
 
+.content-links-nav {
+    padding-left: 10rem;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.nav-link.active {
+    text-shadow: 8px 1px 8px var(--verde-escuro);
+}
+
+#login-section {
+    width: 8%;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    margin-right: 3rem;
 }
 
 .button-login {
@@ -27,18 +52,6 @@
     text-shadow: 1px 1px 1px black;
 }
 
-.img-logo {
-    max-width: 60px;
-}
-
-#login-section {
-    width: 8%;
-    display: flex;
-    justify-content: end;
-    padding-right: 2rem;
-    margin-right: 3rem;
-}
-
 .img-container-user {
     width: 100%
 }
@@ -46,38 +59,6 @@
 .img-user {
     width: 50%;
 }
-
-.active {
-    text-shadow: 3px 1px 5px black;
-}
-
-.nav-bar-theme {
-    z-index: 9999;
-    background-color: transparent;
-    position: absolute;
-    backdrop-filter: blur(8px);
-    background-color: #ffffff33;
-    color: white;
-    width: 100%;
-    /*border-bottom: 8px solid var(--verde-claro);*/
-}
-
-.nav-link {
-    color: white !important;
-    font-weight: bold;
-    font-size: 2rem;
-    text-shadow: 1px 1px 1px black;
-}
-
-.nav-link.active {
-    text-shadow: 8px 1px 8px var(--verde-escuro);
-}
-
-.content-links-nav {
-    padding-left: 10rem;
-}
-
-
 
 @media(max-width:1300px) {
 
@@ -95,10 +76,6 @@
 }
 
 @media(max-width:992px) {
-
-
-
-
     .img-user {
         max-width: 8%;
         padding-bottom: 0.5rem;

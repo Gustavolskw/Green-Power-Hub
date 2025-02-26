@@ -1,9 +1,9 @@
-#cadastroUser {
-    border-radius: 10px;
-}
-
 #conteudo-cadastro {
     padding: 10rem 5rem 5rem 5rem;
+}
+
+#cadastroUser {
+    border-radius: 10px;
 }
 
 .img-side-cadastro {
@@ -20,11 +20,7 @@
 }
 
 @media(max-width:768px) {
-
-
     .img-side-cadastro {
         display: none;
     }
-
-
 }
