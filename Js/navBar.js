@@ -1,3 +1,15 @@
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const navbar = document.getElementById("navBar");
+    if (window.scrollY > lastScrollY) {
+        navbar.classList.add("nav-hide"); // Esconde ao rolar para baixo
+    } else {
+        navbar.classList.remove("nav-hide"); // Mostra ao rolar para cima
+    }
+    lastScrollY = window.scrollY;
+});
+
 const temasImportantesList = {
     "solar-ener": {
         titulo: "Energia Solar"
