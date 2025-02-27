@@ -2,9 +2,15 @@
     padding: 10rem 5rem 5rem 5rem;
 }
 
+#conteudo-cadastro>section {
+    width: 80%;
+    margin: 0 auto;
+}
+
 #cadastroUser {
     border-radius: 10px;
 }
+
 
 .img-side-cadastro {
     width: 100%;
@@ -13,9 +19,16 @@
     border-top-right-radius: 10px;
 }
 
+
+
 @media(max-width:1200px) {
     #conteudo-cadastro {
         padding: 10rem 0;
+    }
+
+    .img-side-cadastro {
+        width: 100%;
+        height: 100%;
     }
 }
 
